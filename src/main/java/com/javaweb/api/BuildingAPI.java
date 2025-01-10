@@ -14,9 +14,9 @@ public class BuildingAPI {
 	@Autowired
 	BuildingServiceImpl buildingServiceImpl;
 	@GetMapping("/test")
-	public List<BuildingDTO> getBuilding(@RequestParam(value = "name", required = false) String name,
+	public List<BuildingDTO> getBuilding(@RequestParam(value = "name", required = false) String name_Building,
 									     @RequestParam(value = "districtId", required = false) Long districtId) {
-		List<BuildingDTO> result = buildingServiceImpl.findAll(name, districtId);
+		List<BuildingDTO> result = buildingServiceImpl.findAll(name_Building, districtId);
 		return result;
 	}
 }
